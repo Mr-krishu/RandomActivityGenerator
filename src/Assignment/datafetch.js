@@ -23,13 +23,13 @@ const Datafetch = () => {
     const [count,setCount]=useState(0);
     const [status,setStatus] =useState(null,options);
 
-var arr=[];
+
     useEffect(() => {
         return(
       axios.get("https://www.boredapi.com/api/activity/")
         .then((response) => {
             setData(response.data);
-            arr.push(response.data);
+          
          
          
         })
@@ -41,7 +41,6 @@ var arr=[];
 let string =`${data.type}`;
 
   
-console.log(arr);
     const handleChange = selectedOption => {
        setStatus( selectedOption );
       
