@@ -29,7 +29,7 @@ const Datafetch = () => {
       axios.get("https://www.boredapi.com/api/activity/")
         .then((response) => {
             setData(response.data);
-          
+            setStatus(null,options);
          
          
         })
